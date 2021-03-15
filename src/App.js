@@ -14,6 +14,9 @@ import MenuIcon from "@material-ui/icons/Menu";
 import "fontsource-roboto";
 import "./App.css";
 import CircularProgress from "@material-ui/core/CircularProgress";
+import ReactGA from "react-ga";
+ReactGA.initialize("G-752PBVQ3SJ");
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 const useStyles = makeStyles((theme) => ({
   progress: {

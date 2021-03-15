@@ -16,7 +16,7 @@ import "./App.css";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import ReactGA from "react-ga";
 
-ReactGA.initialize("G-752PBVQ3SJ");
+ReactGA.initialize("UA-192147633-1");
 
 const useStyles = makeStyles((theme) => ({
   progress: {

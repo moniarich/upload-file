@@ -46,7 +46,7 @@ const useStyles = makeStyles((theme) => ({
     color: "inherit",
   },
 }));
-
+const apiUrl = process.env.REACT_APP_APIURL || "http://localhost:3001";
 const UploadFile = () => {
   const [isLoading, setisLoading] = useState(false);
   const [message, setMessages] = useState({ type: "", text: "" });
@@ -58,7 +58,7 @@ const UploadFile = () => {
     try {
       setisLoading(true);
 
-      const res = await fetch("http://localhost:3001/upload", {
+      const res = await fetch(`${apiUrl}/upload`, {
         method: "POST",
         body: formData,
       });

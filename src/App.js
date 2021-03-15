@@ -73,6 +73,7 @@ const UploadFile = () => {
       setIsFinished(true);
     } catch (e) {
       setMessages({ type: "error", text: e.message });
+      setisLoading(false);
     }
   };
   return (

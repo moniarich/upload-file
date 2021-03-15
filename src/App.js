@@ -15,8 +15,6 @@ import "fontsource-roboto";
 import "./App.css";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import ReactGA from "react-ga";
-ReactGA.initialize("G-752PBVQ3SJ");
-ReactGA.pageview(window.location.pathname + window.location.search);
 
 const useStyles = makeStyles((theme) => ({
   progress: {
@@ -51,6 +49,9 @@ const useStyles = makeStyles((theme) => ({
 }));
 const apiUrl = process.env.REACT_APP_APIURL || "http://localhost:3001";
 const UploadFile = () => {
+  ReactGA.initialize("G-752PBVQ3SJ");
+  ReactGA.pageview(window.location.pathname + window.location.search);
+
   const [isLoading, setisLoading] = useState(false);
   const [message, setMessages] = useState({ type: "", text: "" });
   const classes = useStyles();
